@@ -1,0 +1,93 @@
+.main {
+  background-color: black ;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width:100vw;
+  height:100vh;
+  position: absolute;
+}
+
+.pl2 {
+  display: block;
+  width: 8em;
+  height: 8em;
+}
+
+.pl2__rect,
+.pl2__rectg {
+  animation: pl1-a 1.5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+.pl2__rect,
+.pl2__rectg {
+  animation-name: pl2a;
+}
+
+.pl2__rect {
+  animation-name: pl2b;
+}
+
+.pl2__rectg .pl2__rect {
+  transform-origin: 20px 128px;
+}
+
+.pl2__rectg:first-child,
+.pl2__rectg:first-child .pl2__rect {
+  animation-delay: -0.25s;
+}
+
+.pl2__rectg:nth-child(2),
+.pl2__rectg:nth-child(2) .pl2__rect {
+  animation-delay: -0.125s;
+}
+
+.pl2__rectg:nth-child(2) .pl2__rect {
+  transform-origin: 64px 128px;
+}
+
+.pl2__rectg:nth-child(3) .pl2__rect {
+  transform-origin: 108px 128px;
+}
+
+@keyframes pl2a {
+
+  from,
+  25%,
+  66.67%,
+  to {
+    transform: translateY(0);
+  }
+
+  50% {
+    animation-timing-function: cubic-bezier(0.33, 0, 0.67, 0);
+    transform: translateY(-80px);
+  }
+}
+
+@keyframes pl2b {
+
+  from,
+  to {
+    animation-timing-function: cubic-bezier(0.33, 0, 0.67, 0);
+    width: 40px;
+    height: 24px;
+    transform: rotate(180deg) translateX(0);
+  }
+
+  33.33% {
+    animation-timing-function: cubic-bezier(0.33, 1, 0.67, 1);
+    width: 20px;
+    height: 64px;
+    transform: rotate(180deg) translateX(10px);
+  }
+
+  66.67% {
+    animation-timing-function: cubic-bezier(0.33, 1, 0.67, 1);
+    width: 28px;
+    height: 44px;
+    transform: rotate(180deg) translateX(6px);
+  }
+}

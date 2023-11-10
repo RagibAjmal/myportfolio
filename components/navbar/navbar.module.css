@@ -1,0 +1,130 @@
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
+.button {
+  --border-bottom: 6px;
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
+  --animation-color: #37ff8b;
+  --fs-size: 1.5rem;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: var(--text-stroke-color);
+  /* -webkit-text-stroke: 1px var(--text-stroke-color); */
+  padding-bottom: 10px;
+}
+
+.actualtext {
+  position: relative;
+}
+
+/* this is the text, when you hover on button */
+.hovertext {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-bottom: var(--border-bottom) solid #37ff8b;
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+
+.header_class {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px;
+  left: 0;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.nav_ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+/* Mobile menu */
+
+
+.toggle {
+  order: 1;
+  font-size: 20px;
+}
+
+.item {
+  order: 3;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Tablet menu */
+@media all and (min-width: 100px) {
+  
+  .nav_ul {
+      flex-direction: column;
+    }
+  .item {
+    display: flex;
+    margin: 2%;
+    text-align: left;
+  }
+  .toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+/* Desktop menu */
+@media all and (min-width: 960px) {
+
+  .nav_ul {
+    flex-direction: row;
+    align-items: flex-end;
+    width: auto;
+  }
+  .item{
+    margin: auto;
+    width:auto;height: auto;
+  }
+
+  .toggle {
+    display: none;
+  }
+}

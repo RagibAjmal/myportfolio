@@ -1,0 +1,33 @@
+.terminal {
+  display: flex;
+  align-items: center;
+  height: 90vh;
+  position: fixed;
+  padding: 10px;
+}
+
+.prompt {
+  color: #37ff8b;
+  font-size: large;
+  font-weight: bold;
+}
+
+.root {
+  background-color: black;
+  border-color: black;
+  padding: 25px;
+  scrollbar-width: 0px;
+  overflow: hidden;
+}
+
+.response {
+  color: #ab47bc;
+  font-size: medium;
+  padding-bottom: 5px;
+  padding-top: 3px;
+  font-weight: bold;
+}
+.wm{
+    font-size: larger;
+    font-weight: bolder;padding-bottom: 5px;
+}
